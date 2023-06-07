@@ -1,0 +1,737 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Lato&display=swap');
+
+
+/*Default attributes for all of the pages*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: rgb(255, 255, 255); */
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+
+}
+
+/*NAVIGATION BAR CODE BELOW*/
+nav {
+    background: rgb(32, 34, 38);
+    padding: 0 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav__links {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__links li a {
+    display: block;
+    padding: 15px 5px;
+}
+
+.logo {
+    pointer-events: none;
+    font-size: 20px;
+    padding: 7.5px 10px 7.5px 0;
+}
+
+.menuItem {
+    padding: 5px;
+    order: 2;
+    width: 100%;
+    text-align: center;
+    display: none;
+
+}
+
+.menuItem:hover {
+    background-color: #3b7cf5;
+}
+
+.toggle {
+    order: 1;
+    font-size: 20px;
+}
+
+@media all and (min-width: 920px) {
+    .menuItem {
+        order: 1;
+        position: relative;
+        display: block;
+        width: auto;
+
+
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    /*Page check*/
+    #contactCheck {
+        border-bottom: solid 1px #ffffff;
+        margin-bottom: 2px;
+
+    }
+
+    #homeCheck {
+        border-bottom: solid 1px #ffffff;
+        margin-bottom: 2px;
+    }
+
+    #aboutMeCheck {
+        border-bottom: solid 1px #ffffff;
+        margin-bottom: 2px;
+    }
+
+    #portfolioCheck {
+        border-bottom: solid 1px #ffffff;
+        margin-bottom: 2px;
+    }
+
+    #servicesCheck {
+        border-bottom: solid 1px #ffffff;
+        margin-bottom: 2px;
+    }
+
+    #testimonialsCheck {
+        border-bottom: solid 1px #ffffff;
+        margin-bottom: 2px;
+    }
+
+    #workCheck {
+        border-bottom: solid 1px #ffffff;
+        margin-bottom: 2px;
+    }
+
+
+}
+
+@media all and (max-width: 919px) {
+    .menuItem {
+        border-top: 1px solid rgb(185, 185, 185);
+
+    }
+
+    .active .menuItem {
+        display: block;
+    }
+}
+
+/* FOOTER CODE BELOW */
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background: rgb(32, 34, 38); */
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.socials a i {
+    font-size: 2.1rem;
+    transition: color .4s ease;
+
+}
+
+.socials a:hover i {
+    color: burlywood;
+}
+
+.footer-bottom {
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+/*BELOW HERE IS THE CODING FOR THE PORTFOLIO PART*/
+.portBody {
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.PortfolioHead {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Calligraffitti', cursive;
+    text-align: center;
+    font-size: 3rem;
+    color: #0583e39a;
+}
+
+/* The grid that contains a portfolio of photos */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+    box-sizing: border box;
+    grid-gap: 0.1rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+
+
+}
+
+/* The image container*/
+.testImage {
+    position: relative;
+    margin: 0.3rem 0.3rem 0.3rem 0.3rem;
+}
+
+/* The actual image itself. Takes up all the space in the image container */
+.image__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* The attributes of the image's hover layout */
+.image__overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    /*Horizontally and Vertically align the text*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+    border-radius: 20px;
+
+}
+
+/*Part of the image overlay transition animation*/
+.image__overlay>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+/* Overlay is present when a picture is hovered over */
+.image__overlay:hover {
+    opacity: 1;
+
+}
+
+/*Part of the image overlay transition animation*/
+.image__overlay:hover>* {
+    transform: translateY(0);
+}
+
+/*The image's title within the overlay*/
+.image__title {
+    font-size: 1.1em;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+/*The image's description within the overlay*/
+.image__description {
+    font-size: 0.85em;
+    margin-top: 0.25em;
+}
+
+/*BELOW HERE IS THE CODE FOR THE TESTIMONIALS AND WORK EXPERIENCES SECTIONS*/
+
+/* Adds a grey to brown gradient background on the pages */
+.wtBody{
+    background-image:linear-gradient(grey,brown);
+}
+
+
+.SectionBody {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.SectionBody .heading b {
+    color: #fff;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/*The box of the text, quotes, and name*/
+.wrapper .container {
+    position: relative;
+    width: 350px;
+    color: #fff;
+    background: rgb(80, 42, 42, 0.6);
+    margin: 40px 10px;
+    padding: 30px 20px;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.wrapper .container .profile {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -10%;
+    width: 100%;
+    display: block;
+}
+
+/*The image's border container*/
+.wrapper .container .profile .imgBox {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    border: 4px solid #070c0d;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.wrapper .container .profile .imgBox img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.wrapper .container .profile h2 {
+    padding: px 0;
+    text-transform: capitalize;
+    color: #fff;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: large;
+}
+
+.wrapper .container p {
+    margin-top: 50px;
+    color: #fff;
+    padding: 0 8px;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+/*Left quote*/
+.wrapper .container .left {
+    font-size: 30px;
+    display: block;
+    text-align: left;
+    color: #3b7cf5;
+}
+
+/*Right quote*/
+.wrapper .container .right {
+    font-size: 30px;
+    display: block;
+    text-align: right;
+    color: #3b7cf5;
+}
+
+/*BELOW IS THE TESTIMONIALS PAGE*/
+.testiHead {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*BELOW IS THE TESTIMONIALS PAGE*/
+.workHead {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+/*BELOW IS THE CONTACT ME PAGE*/
+.contactBod {
+    background-color: #e7eff9;
+    background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
+}
+
+.contact-section {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info {
+    min-width: 600px;
+    line-height: 65px;
+    padding-left: 50px;
+    font-size: 1.5em;
+}
+
+.contact-info i {
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin-right: 50px;
+}
+
+.contact-info,
+.contact-form {
+    flex: 1;
+}
+
+.contact-form h2 {
+
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.contact-form .text-box {
+    background: #000;
+    color: #fff;
+    border: none;
+    width: calc(50% - 10px);
+    height: 50px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.contact-form .text-box:first-child {
+    margin-right: 15px;
+}
+
+.contact-form textarea {
+    background: #000;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.contact-form .send-btn {
+    float: right;
+    background: #2E94E3;
+    color: #fff;
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: background;
+    margin-bottom: 20px;
+}
+
+.contact-form .send-btn:hover {
+    background: #0582E3;
+}
+
+@media screen and (max-width: 950px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        margin: 30px 50px;
+    }
+
+    .contact-form h2 {
+        font-size: 30px;
+    }
+
+    .contact-form .text-box {
+        width: 100%;
+    }
+}
+
+/* Below is the CSS for the services page! */
+
+.serivceHead {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.tierRow img {
+    width: 13em;
+    height: 13em;
+    padding-left: 2em;
+    padding-right: 1.2em;
+    padding-top: 1em;
+
+}
+
+table th {
+    text-align: center;
+    vertical-align: center;
+    background-color: rgb(46, 45, 45);
+    text-transform: capitalize;
+    font-weight: bolder;
+    color: white;
+
+
+}
+
+table td {
+    padding-bottom: 1em;
+    padding-top: .5em;
+    padding-left: 3em;
+    padding-right: 3em;
+    vertical-align: center;
+    text-align: center;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.192);
+
+}
+
+.tierTable {
+    overflow-x: auto;
+}
+
+@media only screen and (max-width:600px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+
+    }
+
+    tr {
+        border: 1px solid rgba(128, 128, 128, 0.192);
+
+    }
+
+    td {
+        position: relative;
+    }
+
+    td span.vanish {
+        color: white;
+    }
+
+    td img {
+        align-items: center;
+    }
+
+    td:before {
+        position: absolute;
+        top: 5px;
+        left: -45px;
+        width: 50%;
+        padding-left: 27%;
+        padding-bottom: 5%;
+
+    }
+
+    td:after {
+        position: absolute;
+        bottom: 5px;
+        left: -45px;
+        width: 50%;
+        padding-left: 27%
+    }
+
+    td:nth-of-type(1):before {
+        content: "Tier";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Camera Work";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Retouch";
+    }
+
+    td:nth-of-type(4):before {
+        content: "Full Editing";
+    }
+
+    td:nth-of-type(5):before {
+        content: "Photography Studio Access";
+    }
+
+    td:nth-of-type(6):before {
+        content: "Set Design";
+    }
+
+}
+
+/* Below is the CSS for the About Me Page! */
+/* Styles the container for the about me page, centering text and setting the width.*/
+.aboutContainer {
+    margin: 0 auto;
+    padding: 0 1em;
+    margin-top: 5em;
+    text-align: center;
+    width: 1500px;
+    max-width: 100%;
+
+
+
+}
+
+/* Adds the gradient i was talking about, the image's background was a little jarring against a flat white background.*/
+.aboutBody {
+    background-image: linear-gradient(to bottom right, rgb(117, 66, 8), gray);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Sets image's size and margins, as well as floats it to the left of the text. */
+.aboutContainer img {
+    height: 30rem;
+    width: 35rem;
+    float: left;
+    margin-right: 4em;
+    margin-bottom: 4em;
+    border-radius: 20px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* styles the header for the about me page */
+.aboutContainer h1 {
+    color: rgba(56, 11, 13, 0.74);
+    font-size: 3rem;
+    margin-bottom: 25px;
+    font-family: 'Lato', sans-serif;
+
+}
+
+/* styles the about me page's text, as well as alters the line height */
+.aboutText {
+    font-size: 2em;
+    line-height: 2em;
+    color: rgba(255, 255, 255, 0.781);
+    margin-bottom: 60px;
+
+}
+
+/*Shrinks the 'about me' image as the window shrinks*/
+@media only screen and (max-width: 630px) {
+    .aboutContainer img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Below this line is the homepage CSS */
+
+/*  just makes the homepage image fit the page, ezpz. */
+.homePage {
+    width: 100%;
+    height: auto;
+}
